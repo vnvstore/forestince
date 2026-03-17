@@ -17,6 +17,7 @@
 - [Technical Trade-offs](#technical-trade-offs)
 - [Setup](#setup)
 - [Future Improvements](#future-improvements)
+- [Demo](#demo)
 - [Final Notes](#final-notes)
 
 ---
@@ -167,6 +168,24 @@ Planned or recommended next steps:
 
 - Integrate a real backend API and authentication flows
 - Add unit and widget tests for key controllers and widgets
+
+---
+
+## Demo
+
+Screenshots from the app are included below.
+
+<p align="center">
+  <a href="assets/screenshots/1.png">
+    <img src="assets/screenshots/1.png" width="320" alt="Screenshot 1" />
+  </a>
+  <a href="assets/screenshots/2.png">
+    <img src="assets/screenshots/2.png" width="320" alt="Screenshot 2" />
+  </a>
+  <a href="assets/screenshots/3.png">
+    <img src="assets/screenshots/3.png" width="320" alt="Screenshot 3" />
+  </a>
+</p>
 
 ---
 
