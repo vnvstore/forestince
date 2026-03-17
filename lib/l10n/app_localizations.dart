@@ -135,6 +135,90 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Reports'**
   String get reportTitle;
+
+  /// No description provided for @totalBookings.
+  ///
+  /// In en, this message translates to:
+  /// **'Total Bookings'**
+  String get totalBookings;
+
+  /// No description provided for @activeFacilities.
+  ///
+  /// In en, this message translates to:
+  /// **'Active Facilities'**
+  String get activeFacilities;
+
+  /// No description provided for @registeredUsers.
+  ///
+  /// In en, this message translates to:
+  /// **'Registered Users'**
+  String get registeredUsers;
+
+  /// No description provided for @pendingRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending Requests'**
+  String get pendingRequests;
+
+  /// No description provided for @recentBookings.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent Bookings'**
+  String get recentBookings;
+
+  /// No description provided for @viewAll.
+  ///
+  /// In en, this message translates to:
+  /// **'View All'**
+  String get viewAll;
+
+  /// No description provided for @addBooking.
+  ///
+  /// In en, this message translates to:
+  /// **'+ Booking'**
+  String get addBooking;
+
+  /// No description provided for @statusConfirmed.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirmed'**
+  String get statusConfirmed;
+
+  /// No description provided for @statusPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get statusPending;
+
+  /// No description provided for @statusCompleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed'**
+  String get statusCompleted;
+
+  /// No description provided for @statusNew.
+  ///
+  /// In en, this message translates to:
+  /// **'New'**
+  String get statusNew;
+
+  /// No description provided for @facilityUsage.
+  ///
+  /// In en, this message translates to:
+  /// **'Facility Usage'**
+  String get facilityUsage;
+
+  /// No description provided for @bookingBy.
+  ///
+  /// In en, this message translates to:
+  /// **'Booked by'**
+  String get bookingBy;
+
+  /// No description provided for @bookingTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Booking Time'**
+  String get bookingTime;
 }
 
 class _AppLocalizationsDelegate

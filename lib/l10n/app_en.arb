@@ -1,14 +1,33 @@
 {
-  "@@locale": "en",
-  "appUpdateRequiredTitle": "App Update Required",
-  "appUpdateRequiredContent": "Please update to continue using the app.",
-  "genericError": "An error occurred",
+    "@@locale": "en",
+    "appUpdateRequiredTitle": "App Update Required",
+    "appUpdateRequiredContent": "Please update to continue using the app.",
+    "genericError": "An error occurred",
 
 
-  "dashboardTitle": "Dashboard",
-  "facilityTitle": "Facilities",
-  "userTitle": "Users",
-  "reportTitle": "Reports"
+    "dashboardTitle": "Dashboard",
+    "facilityTitle": "Facilities",
+    "userTitle": "Users",
+    "reportTitle": "Reports",
+
+    "totalBookings": "Total Bookings",
+    "activeFacilities": "Active Facilities",
+    "registeredUsers": "Registered Users",
+    "pendingRequests": "Pending Requests",
+
+    "recentBookings": "Recent Bookings",
+    "viewAll": "View All",
+    "addBooking": "+ Booking",
+
+    "statusConfirmed": "Confirmed",
+    "statusPending": "Pending",
+    "statusCompleted": "Completed",
+    "statusNew": "New",
+
+    "facilityUsage": "Facility Usage",
+
+    "bookingBy": "Booked by",
+    "bookingTime": "Booking Time"
 
 }
 
