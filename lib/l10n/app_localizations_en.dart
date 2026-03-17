@@ -43,6 +43,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pendingRequests => 'Pending Requests';
 
   @override
+  String get summary => 'Summary';
+
+  @override
   String get recentBookings => 'Recent Bookings';
 
   @override
@@ -71,4 +74,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get bookingTime => 'Booking Time';
+
+  @override
+  String get appName => 'Forestince';
 }

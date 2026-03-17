@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:nexus_english/l10n/app_localizations.dart';
 
@@ -57,37 +58,89 @@ class ScaffoldWithNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    double size = 18;
+
     return Scaffold(
       body: body,
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: currentIndex,
-        destinations: [
-          // Home
-          NavigationDestination(
-            icon: const Icon(Icons.home_outlined),
-            selectedIcon: const Icon(Icons.home),
-            label: AppLocalizations.of(context)!.dashboardTitle,
-          ),
-          // Practice
-          NavigationDestination(
-            icon: const Icon(Icons.school_outlined),
-            selectedIcon: const Icon(Icons.school),
-            label: AppLocalizations.of(context)!.facilityTitle,
-          ),
-          // Progress
-          NavigationDestination(
-            icon: const Icon(Icons.show_chart_outlined),
-            selectedIcon: const Icon(Icons.show_chart),
-            label: AppLocalizations.of(context)!.userTitle,
-          ),
-          // Settings
-          NavigationDestination(
-            icon: const Icon(Icons.settings_outlined),
-            selectedIcon: const Icon(Icons.settings),
-            label: AppLocalizations.of(context)!.reportTitle,
-          ),
-        ],
-        onDestinationSelected: onDestinationSelected,
+      bottomNavigationBar: Theme(
+        // Use a local Theme override to disable the NavigationBar indicator
+        data: Theme.of(context).copyWith(
+          navigationBarTheme: Theme.of(context).navigationBarTheme.copyWith(
+                indicatorColor: Colors.transparent,
+              ),
+        ),
+        child: NavigationBar(
+          selectedIndex: currentIndex,
+          destinations: [
+            // Dashboard
+
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                'assets/images/bottom_nav_dashboard.svg',
+                colorFilter: ColorFilter.mode(cs.onSurface, BlendMode.srcIn),
+                width: size,
+                height: size,
+              ),
+              selectedIcon: SvgPicture.asset(
+                'assets/images/bottom_nav_dashboard.svg',
+                colorFilter: ColorFilter.mode(cs.primary, BlendMode.srcIn),
+                width: size,
+                height: size,
+              ),
+              label: AppLocalizations.of(context)!.dashboardTitle,
+            ),
+            //Facility
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                'assets/images/bottom_nav_facility.svg',
+                colorFilter: ColorFilter.mode(cs.onSurface, BlendMode.srcIn),
+                width: size,
+                height: size,
+              ),
+              selectedIcon: SvgPicture.asset(
+                'assets/images/bottom_nav_facility.svg',
+                colorFilter: ColorFilter.mode(cs.primary, BlendMode.srcIn),
+                width: size,
+                height: size,
+              ),
+              label: AppLocalizations.of(context)!.facilityTitle,
+            ),
+            // Users
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                'assets/images/bottom_nav_user.svg',
+                colorFilter: ColorFilter.mode(cs.onSurface, BlendMode.srcIn),
+                width: size,
+                height: size,
+              ),
+              selectedIcon: SvgPicture.asset(
+                'assets/images/bottom_nav_user.svg',
+                colorFilter: ColorFilter.mode(cs.primary, BlendMode.srcIn),
+                width: size,
+                height: size,
+              ),
+              label: AppLocalizations.of(context)!.userTitle,
+            ),
+            // Reports
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                'assets/images/bottom_nav_report.svg',
+                colorFilter: ColorFilter.mode(cs.onSurface, BlendMode.srcIn),
+                width: size,
+                height: size,
+              ),
+              selectedIcon: SvgPicture.asset(
+                'assets/images/bottom_nav_report.svg',
+                colorFilter: ColorFilter.mode(cs.primary, BlendMode.srcIn),
+                width: size,
+                height: size,
+              ),
+              label: AppLocalizations.of(context)!.reportTitle,
+            ),
+          ],
+          onDestinationSelected: onDestinationSelected,
+        ),
       ),
     );
   }
@@ -107,32 +160,75 @@ class ScaffoldWithNavigationRail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    double size = 18;
     return Scaffold(
       body: Row(
         children: [
           NavigationRail(
+            useIndicator: false,
             selectedIndex: currentIndex,
             onDestinationSelected: onDestinationSelected,
             labelType: NavigationRailLabelType.all,
             destinations: <NavigationRailDestination>[
               NavigationRailDestination(
-                icon: const Icon(Icons.home_outlined),
-                selectedIcon: const Icon(Icons.home),
+                icon: SvgPicture.asset(
+                  'assets/images/bottom_nav_dashboard.svg',
+                  colorFilter: ColorFilter.mode(cs.onSurface, BlendMode.srcIn),
+                  width: size,
+                  height: size,
+                ),
+                selectedIcon: SvgPicture.asset(
+                  'assets/images/bottom_nav_dashboard.svg',
+                  colorFilter: ColorFilter.mode(cs.primary, BlendMode.srcIn),
+                  width: size,
+                  height: size,
+                ),
                 label: Text(AppLocalizations.of(context)!.dashboardTitle),
               ),
               NavigationRailDestination(
-                icon: const Icon(Icons.school_outlined),
-                selectedIcon: const Icon(Icons.school),
+                icon: SvgPicture.asset(
+                  'assets/images/bottom_nav_facility.svg',
+                  colorFilter: ColorFilter.mode(cs.onSurface, BlendMode.srcIn),
+                  width: size,
+                  height: size,
+                ),
+                selectedIcon: SvgPicture.asset(
+                  'assets/images/bottom_nav_facility.svg',
+                  colorFilter: ColorFilter.mode(cs.primary, BlendMode.srcIn),
+                  width: size,
+                  height: size,
+                ),
                 label: Text(AppLocalizations.of(context)!.facilityTitle),
               ),
               NavigationRailDestination(
-                icon: const Icon(Icons.show_chart_outlined),
-                selectedIcon: const Icon(Icons.show_chart),
+                icon: SvgPicture.asset(
+                  'assets/images/bottom_nav_user.svg',
+                  colorFilter: ColorFilter.mode(cs.onSurface, BlendMode.srcIn),
+                  width: size,
+                  height: size,
+                ),
+                selectedIcon: SvgPicture.asset(
+                  'assets/images/bottom_nav_user.svg',
+                  colorFilter: ColorFilter.mode(cs.primary, BlendMode.srcIn),
+                  width: size,
+                  height: size,
+                ),
                 label: Text(AppLocalizations.of(context)!.userTitle),
               ),
               NavigationRailDestination(
-                icon: const Icon(Icons.settings_outlined),
-                selectedIcon: const Icon(Icons.settings),
+                icon: SvgPicture.asset(
+                  'assets/images/bottom_nav_report.svg',
+                  colorFilter: ColorFilter.mode(cs.onSurface, BlendMode.srcIn),
+                  width: size,
+                  height: size,
+                ),
+                selectedIcon: SvgPicture.asset(
+                  'assets/images/bottom_nav_report.svg',
+                  colorFilter: ColorFilter.mode(cs.primary, BlendMode.srcIn),
+                  width: size,
+                  height: size,
+                ),
                 label: Text(AppLocalizations.of(context)!.reportTitle),
               ),
             ],

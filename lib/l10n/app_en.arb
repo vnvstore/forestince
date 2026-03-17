@@ -14,6 +14,7 @@
     "activeFacilities": "Active Facilities",
     "registeredUsers": "Registered Users",
     "pendingRequests": "Pending Requests",
+    "summary": "Summary",
 
     "recentBookings": "Recent Bookings",
     "viewAll": "View All",
@@ -27,7 +28,9 @@
     "facilityUsage": "Facility Usage",
 
     "bookingBy": "Booked by",
-    "bookingTime": "Booking Time"
+    "bookingTime": "Booking Time",
+    "appName": "Forestince"
+
 
 }
 

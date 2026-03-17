@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nexus_english/src/features/dashboard/presentation/home_screen.dart';
 import 'package:nexus_english/src/features/facility/presentation/facility_screen.dart';
 import 'package:nexus_english/src/features/report/presentation/report_screen.dart';
 import 'package:nexus_english/src/features/user/presentation/user_screen.dart';
@@ -13,6 +12,8 @@ import 'package:nexus_english/src/features/onboarding/presentation/onboarding_sc
 import 'package:nexus_english/src/routing/go_router_refresh_stream.dart';
 import 'package:nexus_english/src/routing/not_found_screen.dart';
 import 'package:nexus_english/src/routing/scaffold_with_nested_navigation.dart';
+
+import '../features/dashboard/presentation/dashboard_screen.dart';
 
 part 'app_router.g.dart';
 

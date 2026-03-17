@@ -160,6 +160,12 @@ abstract class AppLocalizations {
   /// **'Pending Requests'**
   String get pendingRequests;
 
+  /// No description provided for @summary.
+  ///
+  /// In en, this message translates to:
+  /// **'Summary'**
+  String get summary;
+
   /// No description provided for @recentBookings.
   ///
   /// In en, this message translates to:
@@ -219,6 +225,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Booking Time'**
   String get bookingTime;
+
+  /// No description provided for @appName.
+  ///
+  /// In en, this message translates to:
+  /// **'Forestince'**
+  String get appName;
 }
 
 class _AppLocalizationsDelegate
