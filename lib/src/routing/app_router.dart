@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nexus_english/src/features/facility/presentation/facility_screen.dart';
+import 'package:nexus_english/src/features/facility/presentation/request_facility_screen.dart';
 import 'package:nexus_english/src/features/report/presentation/report_screen.dart';
 import 'package:nexus_english/src/features/user/presentation/user_screen.dart';
 import 'package:riverpod/riverpod.dart';
@@ -29,6 +30,7 @@ enum AppRoute {
   signIn,
   dashboard,
   facility,
+  requestFacility,
   user,
   report,
 }
@@ -118,73 +120,19 @@ GoRouter goRouter(Ref ref) {
                 pageBuilder: (context, state) => const NoTransitionPage(
                   child: DashboardScreen(),
                 ),
-                // routes: [
-                //   GoRoute(
-                //     path: 'add',
-                //     name: AppRoute.addJob.name,
-                //     parentNavigatorKey: _rootNavigatorKey,
-                //     pageBuilder: (context, state) {
-                //       return const MaterialPage(
-                //         fullscreenDialog: true,
-                //         child: EditJobScreen(),
-                //       );
-                //     },
-                //   ),
-                //   GoRoute(
-                //     path: ':id',
-                //     name: AppRoute.job.name,
-                //     pageBuilder: (context, state) {
-                //       final id = state.pathParameters['id']!;
-                //       return MaterialPage(
-                //         child: JobEntriesScreen(jobId: id),
-                //       );
-                //     },
-                //     routes: [
-                //       GoRoute(
-                //         path: 'entries/add',
-                //         name: AppRoute.addEntry.name,
-                //         parentNavigatorKey: _rootNavigatorKey,
-                //         pageBuilder: (context, state) {
-                //           final jobId = state.pathParameters['id']!;
-                //           return MaterialPage(
-                //             fullscreenDialog: true,
-                //             child: EntryScreen(
-                //               jobId: jobId,
-                //             ),
-                //           );
-                //         },
-                //       ),
-                //       GoRoute(
-                //         path: 'entries/:eid',
-                //         name: AppRoute.entry.name,
-                //         pageBuilder: (context, state) {
-                //           final jobId = state.pathParameters['id']!;
-                //           final entryId = state.pathParameters['eid']!;
-                //           final entry = state.extra as Entry?;
-                //           return MaterialPage(
-                //             child: EntryScreen(
-                //               jobId: jobId,
-                //               entryId: entryId,
-                //               entry: entry,
-                //             ),
-                //           );
-                //         },
-                //       ),
-                //       GoRoute(
-                //         path: 'edit',
-                //         name: AppRoute.editJob.name,
-                //         pageBuilder: (context, state) {
-                //           final jobId = state.pathParameters['id'];
-                //           final job = state.extra as Job?;
-                //           return MaterialPage(
-                //             fullscreenDialog: true,
-                //             child: EditJobScreen(jobId: jobId, job: job),
-                //           );
-                //         },
-                //       ),
-                //     ],
-                //   ),
-                // ],
+                routes: [
+                  GoRoute(
+                    path: 'add',
+                    name: AppRoute.requestFacility.name,
+                    parentNavigatorKey: _rootNavigatorKey,
+                    pageBuilder: (context, state) {
+                      return const MaterialPage(
+                        fullscreenDialog: true,
+                        child: RequestFacilityScreen(),
+                      );
+                    },
+                  ),
+                ],
               ),
             ],
           ),

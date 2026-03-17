@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:nexus_english/src/features/dashboard/domain/booking_controller.dart';
 import 'package:nexus_english/src/features/dashboard/domain/facility_controller.dart';
 import 'package:nexus_english/src/features/dashboard/domain/summary_controller.dart';
@@ -12,6 +13,7 @@ import 'package:nexus_english/src/features/dashboard/presentation/widget/summary
 import 'package:nexus_english/src/features/dashboard/presentation/widget/usage_item.dart';
 import 'package:nexus_english/src/shared/constants/media.dart';
 import 'package:nexus_english/src/shared/utils/media.dart';
+import '../../../routing/app_router.dart';
 import '../../../shared/constants/app_sizes.dart';
 import '../../../shared/theme/app_theme.dart';
 import '../../../shared/widgets/drawer.dart';
@@ -102,12 +104,17 @@ class DashboardScreenState extends ConsumerState<DashboardScreen> {
                 percentage: summary.registeredUsersPercentage,
               ),
               verDis12,
-              SummaryRow(
-                title: AppLocalizations.of(context)!.pendingRequests,
-                value: summary.pendingRequests,
-                icon: buildPendingRequestsIcon(context),
-                percentage: summary.pendingRequestsStatus,
-              ),
+              InkWell(
+                onTap: () {
+                  context.pushNamed(AppRoute.requestFacility.name);
+                },
+                child: SummaryRow(
+                  title: AppLocalizations.of(context)!.pendingRequests,
+                  value: summary.pendingRequests,
+                  icon: buildPendingRequestsIcon(context),
+                  percentage: summary.pendingRequestsStatus,
+                ),
+              )
             ],
           ),
           loading: () => Center(
@@ -177,55 +184,6 @@ class DashboardScreenState extends ConsumerState<DashboardScreen> {
       ],
     );
   }
-
-  // Widget buildRecentBookingsSection(BuildContext context) {
-  //   final theme = Theme.of(context);
-  //   final cs = theme.colorScheme;
-  //   return Column(
-  //     crossAxisAlignment: CrossAxisAlignment.start,
-  //     children: [
-  //       Row(
-  //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  //         children: [
-  //           sectionTitle(context, AppLocalizations.of(context)!.recentBookings),
-  //           Spacer(),
-  //           BookingButton(onPressed: () {}),
-  //           SizedBox(
-  //             width: 12,
-  //           ),
-  //           Text(
-  //             AppLocalizations.of(context)!.viewAll,
-  //             style: theme.textTheme.bodyMedium?.copyWith(
-  //               color: cs.primary,
-  //               fontWeight: FontWeight.w600,
-  //             ),
-  //           ),
-  //         ],
-  //       ),
-  //       verDis12,
-  //       const BookingItem(
-  //         name: 'Birch Meditation Hut',
-  //         facility: 'Marcus Arvidson',
-  //         time: 'Oct 24, 09:00 AM',
-  //         status: Status.confirmed,
-  //       ),
-  //       verDis12,
-  //       const BookingItem(
-  //         name: 'Crystal Spring Bath',
-  //         facility: 'Sarah Jenkins',
-  //         time: 'Oct 24, 11:30 AM',
-  //         status: Status.pending,
-  //       ),
-  //       verDis12,
-  //       const BookingItem(
-  //         name: 'Old Oak Forest Trail',
-  //         facility: 'Erik Nilsson',
-  //         time: 'Oct 23, 02:00 PM',
-  //         status: Status.completed,
-  //       ),
-  //     ],
-  //   );
-  // }
 
   Widget buildFacilitiesSection(BuildContext context) {
     final theme = Theme.of(context);
