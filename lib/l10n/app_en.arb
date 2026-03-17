@@ -1,0 +1,14 @@
+{
+  "@@locale": "en",
+  "appUpdateRequiredTitle": "App Update Required",
+  "appUpdateRequiredContent": "Please update to continue using the app.",
+  "genericError": "An error occurred",
+
+
+  "dashboardTitle": "Dashboard",
+  "facilityTitle": "Facilities",
+  "userTitle": "Users",
+  "reportTitle": "Reports"
+
+}
+
