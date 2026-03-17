@@ -73,7 +73,7 @@ class MyApp extends ConsumerWidget {
         );
       },
       // Use centralized app theme
-      theme: AppTheme.originalTheme(),
+      theme: AppTheme.lightTheme(),
       // Keep system/dark theming but provide a simple dark fallback
       themeMode: ThemeMode.system,
       darkTheme: ThemeData(

@@ -1,21 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nexus_english/src/features/dashboard/presentation/widget/dashboard_header.dart';
+import '../../../shared/widgets/drawer.dart';
 
-class ReportScreen extends ConsumerStatefulWidget {
+class ReportScreen extends ConsumerWidget {
   const ReportScreen({super.key});
 
   @override
-  ConsumerState<ReportScreen> createState() => _ReportScreenState();
-}
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
 
-class _ReportScreenState extends ConsumerState<ReportScreen> {
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-      ),
-      body: Text('Home Screen'),
-    );
+        appBar: null,
+        drawer: CustomDrawer(),
+        body: Container(
+          color: Colors.white,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SafeArea(
+                child: DashboardHeader(),
+              ),
+            ],
+          ),
+        ));
   }
 }

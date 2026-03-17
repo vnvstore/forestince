@@ -34,3 +34,56 @@ const gapH24 = SizedBox(height: Sizes.p24);
 const gapH32 = SizedBox(height: Sizes.p32);
 const gapH48 = SizedBox(height: Sizes.p48);
 const gapH64 = SizedBox(height: Sizes.p64);
+
+const verDis5 = SizedBox(
+  height: 5,
+);
+const verDis10 = SizedBox(
+  height: 10,
+);
+const verDis12 = SizedBox(
+  height: 12,
+);
+const verDis15 = SizedBox(
+  height: 15,
+);
+const verDis20 = SizedBox(
+  height: 20,
+);
+const verDis25 = SizedBox(
+  height: 25,
+);
+const verDis30 = SizedBox(
+  height: 30,
+);
+const verDis35 = SizedBox(
+  height: 35,
+);
+const verDis40 = SizedBox(
+  height: 40,
+);
+
+const hozDis5 = SizedBox(
+  width: 5,
+);
+const hozDis10 = SizedBox(
+  width: 10,
+);
+const hozDis15 = SizedBox(
+  width: 15,
+);
+const hozDis20 = SizedBox(
+  width: 20,
+);
+const hozDis25 = SizedBox(
+  width: 25,
+);
+const hozDis30 = SizedBox(
+  width: 30,
+);
+const hozDis35 = SizedBox(
+  width: 35,
+);
+const hozDis40 = SizedBox(
+  width: 40,
+);

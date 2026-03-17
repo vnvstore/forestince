@@ -1,21 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nexus_english/src/features/dashboard/presentation/widget/dashboard_header.dart';
+import '../../../shared/widgets/drawer.dart';
 
-class FacilityScreen extends ConsumerStatefulWidget {
+class FacilityScreen extends ConsumerWidget {
   const FacilityScreen({super.key});
 
   @override
-  ConsumerState<FacilityScreen> createState() => _FacilityScreenState();
-}
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+    final cs = theme.colorScheme;
 
-class _FacilityScreenState extends ConsumerState<FacilityScreen> {
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-      ),
-      body: Text('Home Screen'),
-    );
+        appBar: null,
+        drawer: CustomDrawer(),
+        body: Container(
+          color: Colors.white,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SafeArea(
+                child: DashboardHeader(),
+              ),
+            ],
+          ),
+        ));
   }
 }

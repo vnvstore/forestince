@@ -29,4 +29,55 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get reportTitle => 'Reports';
+
+  @override
+  String get totalBookings => 'Total Bookings';
+
+  @override
+  String get activeFacilities => 'Active Facilities';
+
+  @override
+  String get registeredUsers => 'Registered Users';
+
+  @override
+  String get pendingRequests => 'Pending Requests';
+
+  @override
+  String get summary => 'Summary';
+
+  @override
+  String get recentBookings => 'Recent Bookings';
+
+  @override
+  String get viewAll => 'View All';
+
+  @override
+  String get addBooking => '+ Booking';
+
+  @override
+  String get statusConfirmed => 'Confirmed';
+
+  @override
+  String get statusPending => 'Pending';
+
+  @override
+  String get statusCompleted => 'Completed';
+
+  @override
+  String get statusNew => 'New';
+
+  @override
+  String get facilityUsage => 'Facility Usage';
+
+  @override
+  String get bookingBy => 'Booked by';
+
+  @override
+  String get bookingTime => 'Booking Time';
+
+  @override
+  String get appName => 'Forestince';
+
+  @override
+  String get errorLoadingFacilities => 'Error loading facilities';
 }
