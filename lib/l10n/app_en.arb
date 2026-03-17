@@ -29,7 +29,9 @@
 
     "bookingBy": "Booked by",
     "bookingTime": "Booking Time",
-    "appName": "Forestince"
+    "appName": "Forestince",
+
+    "errorLoadingFacilities": "Error loading facilities"
 
 
 }

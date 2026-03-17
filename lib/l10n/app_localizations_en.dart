@@ -77,4 +77,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get appName => 'Forestince';
+
+  @override
+  String get errorLoadingFacilities => 'Error loading facilities';
 }

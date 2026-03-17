@@ -231,6 +231,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Forestince'**
   String get appName;
+
+  /// No description provided for @errorLoadingFacilities.
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading facilities'**
+  String get errorLoadingFacilities;
 }
 
 class _AppLocalizationsDelegate

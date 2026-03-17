@@ -76,7 +76,7 @@ class SummaryRow extends StatelessWidget {
           ),
 
           //percentage badge
-          if (percentage != null)
+          if (percentage != null && percentage!.isNotEmpty)
             Container(
               padding: const EdgeInsets.symmetric(
                 horizontal: 8,

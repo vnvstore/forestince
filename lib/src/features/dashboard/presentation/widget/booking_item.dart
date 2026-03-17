@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:nexus_english/src/features/dashboard/data/model/booking_model.dart';
 import 'package:nexus_english/src/shared/utils/media.dart';
 
 class BookingItem extends StatelessWidget {
-  final String name;
-  final String facility;
-  final String time;
-  final Status status;
+  final BookingModel booking;
 
   const BookingItem({
     super.key,
-    required this.name,
-    required this.facility,
-    required this.time,
-    required this.status,
+    required this.booking,
   });
 
   @override
@@ -37,21 +32,21 @@ class BookingItem extends StatelessWidget {
             Row(
               children: [
                 //icon
-                StatusIcon(status: status),
+                StatusIcon(status: booking.status),
 
                 const SizedBox(width: 8),
 
                 /// Name
                 Expanded(
                   child: Text(
-                    name,
+                    booking.name,
                     style: theme.textTheme.titleMedium
                         ?.copyWith(fontWeight: FontWeight.w700),
                   ),
                 ),
 
                 /// status
-                StatusBadge(status: status),
+                StatusBadge(status: booking.status),
               ],
             ),
             Row(
@@ -63,7 +58,7 @@ class BookingItem extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        facility,
+                        booking.facility,
                         style: theme.textTheme.bodyMedium?.copyWith(
                           color: Color(0xFF64748B),
                           fontSize: 12,
@@ -72,7 +67,7 @@ class BookingItem extends StatelessWidget {
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        time,
+                        booking.time,
                         style: theme.textTheme.bodyMedium?.copyWith(
                           color: Color(0xFF64748B),
                           fontSize: 12,
@@ -94,19 +89,18 @@ class BookingItem extends StatelessWidget {
 }
 
 /// ================= STATUS BADGE =================
-enum Status { confirmed, pending, completed }
 
 class StatusIcon extends StatelessWidget {
-  final Status status;
+  final BookingStatus status;
 
   const StatusIcon({super.key, required this.status});
 
   @override
   Widget build(BuildContext context) {
     switch (status) {
-      case Status.confirmed:
+      case BookingStatus.confirmed:
         return buildBookingIconConfirmed();
-      case Status.pending:
+      case BookingStatus.pending:
         return buildBookingIconPending();
       default:
         return buildBookingIconCompleted();
@@ -115,7 +109,7 @@ class StatusIcon extends StatelessWidget {
 }
 
 class StatusBadge extends StatelessWidget {
-  final Status status;
+  final BookingStatus status;
 
   const StatusBadge({super.key, required this.status});
 
@@ -125,15 +119,15 @@ class StatusBadge extends StatelessWidget {
     Color text;
 
     switch (status) {
-      case Status.confirmed:
+      case BookingStatus.confirmed:
         bg = const Color(0xFFDCFCE7);
         text = const Color(0xFF15803D);
         break;
-      case Status.pending:
+      case BookingStatus.pending:
         bg = const Color(0xFFFEF3C7);
         text = const Color(0xFFB45309);
         break;
-      case Status.completed:
+      case BookingStatus.completed:
         bg = const Color(0xFFDBEAFE);
         text = const Color(0xFF1D4ED8);
         break;
