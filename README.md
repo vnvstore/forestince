@@ -173,6 +173,13 @@ Planned or recommended next steps:
 
 ## Demo
 
+Watch the demo video (Google Drive):
+
+-
+Watch: [Demo video — Forestince (walkthrough)](https://drive.google.com/file/d/1Ue5Ao13fzJNdY93wOX81OHUq1EyuRTcy/view?usp=drive_link)
+-
+Download: [Download demo (MP4)](https://drive.google.com/uc?export=download&id=1Ue5Ao13fzJNdY93wOX81OHUq1EyuRTcy)
+
 Screenshots from the app are included below.
 
 <p align="center">
