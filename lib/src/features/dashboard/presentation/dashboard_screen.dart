@@ -17,6 +17,7 @@ import '../../../routing/app_router.dart';
 import '../../../shared/constants/app_sizes.dart';
 import '../../../shared/theme/app_theme.dart';
 import '../../../shared/widgets/drawer.dart';
+import '../../booking/presentation/add_booking_screen.dart';
 
 class DashboardScreen extends ConsumerStatefulWidget {
   const DashboardScreen({super.key});
@@ -143,7 +144,11 @@ class DashboardScreenState extends ConsumerState<DashboardScreen> {
           children: [
             sectionTitle(context, AppLocalizations.of(context)!.recentBookings),
             Spacer(),
-            BookingButton(onPressed: () {}),
+            BookingButton(onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const AddBookingScreen()),
+              );
+            }),
             SizedBox(
               width: 12,
             ),

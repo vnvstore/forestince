@@ -43,7 +43,7 @@ final class RequestFacilityFilterControllerProvider extends $NotifierProvider<
 }
 
 String _$requestFacilityFilterControllerHash() =>
-    r'8516b4732c89afd919cf481edf035062ea409230';
+    r'79aed0d5dab005c0ae6ad1a4f6de8ea0c3435181';
 
 abstract class _$RequestFacilityFilterController
     extends $Notifier<RequestFacilityFilterState> {

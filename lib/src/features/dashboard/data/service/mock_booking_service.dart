@@ -33,4 +33,26 @@ class MockBookingService {
     await Future.delayed(const Duration(milliseconds: 800));
     return _mockBookings;
   }
+
+  /// Adds a booking to the in-memory store. Generates an id if the provided
+  /// booking has an empty id. Simulates network latency.
+  Future<void> addBooking(BookingModel booking) async {
+    await Future.delayed(const Duration(milliseconds: 400));
+
+    // Ensure the booking has a unique id. If the incoming id is empty,
+    // generate one using a timestamp.
+    final id = (booking.id.isEmpty)
+        ? DateTime.now().millisecondsSinceEpoch.toString()
+        : booking.id;
+
+    final newBooking = BookingModel(
+      id: id,
+      name: booking.name,
+      facility: booking.facility,
+      time: booking.time,
+      status: booking.status,
+    );
+
+    _mockBookings.add(newBooking);
+  }
 }
